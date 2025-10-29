@@ -392,73 +392,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segnala un immobile — Subito CASA Web</title>
-    <style>
-        body { margin: 0; font-family: "Poppins", Arial, sans-serif; background: #f4f7fb; color: #1d2a44; }
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .hero { background: linear-gradient(135deg, #0b3fad 0%, #0a6cf1 60%, #39bdf4 100%); color: #fff; padding: 72px 24px 64px; position: relative; overflow: hidden; }
-        .hero::after { content: ""; position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="50" cy="50" r="50" fill="rgba(255,255,255,0.05)"/%3E%3Ccircle cx="200" cy="150" r="90" fill="rgba(255,255,255,0.05)"/%3E%3Ccircle cx="320" cy="80" r="60" fill="rgba(255,255,255,0.05)"/%3E%3C/svg%3E') repeat; opacity: 0.35; }
-        .hero > * { position: relative; z-index: 1; }
-        .hero-content { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; align-items: center; }
-        .hero-text h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 16px; line-height: 1.1; }
-        .hero-text p { font-size: 1.05rem; margin: 0 0 20px; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.2); font-weight: 600; font-size: 0.9rem; margin-bottom: 18px; }
-        .hero-details { background: rgba(255,255,255,0.12); border-radius: 16px; padding: 20px; backdrop-filter: blur(6px); }
-        .hero-details h2 { margin: 0 0 12px; font-size: 1.25rem; }
-        .hero-details ul { margin: 0; padding-left: 20px; list-style: disc; font-size: 0.95rem; }
-        main { flex: 1; }
-        .section { padding: 48px 24px; }
-        .section.narrow { padding-top: 32px; }
-        .section.overlap { margin-top: -64px; }
-        .container { max-width: 1080px; margin: 0 auto; }
-        .intro-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 18px 40px rgba(11, 63, 173, 0.1); }
-        .intro-card h2 { margin-top: 0; font-size: 1.8rem; color: #0b3fad; }
-        .intro-card p { line-height: 1.6; color: #425170; }
-        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 32px; }
-        .step-card { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 12px 24px rgba(11, 63, 173, 0.08); position: relative; overflow: hidden; }
-        .step-card::before { content: attr(data-step); position: absolute; top: 18px; right: 18px; font-size: 0.85rem; font-weight: 600; color: rgba(11, 63, 173, 0.65); }
-        .step-card h3 { margin-top: 0; font-size: 1.2rem; color: #0b3fad; }
-        .step-card p { margin-bottom: 0; color: #425170; line-height: 1.5; }
-        .form-section { background: linear-gradient(120deg, rgba(11,63,173,0.08), rgba(57,189,244,0.12)); }
-        .form-wrapper { background: #fff; border-radius: 18px; padding: 40px; box-shadow: 0 20px 48px rgba(13, 54, 115, 0.12); }
-        .form-header { margin-bottom: 32px; }
-        .form-header h2 { margin: 0 0 8px; font-size: 1.9rem; color: #0b3fad; }
-        .form-header p { margin: 0; color: #4b5a7a; }
-    form { display: flex; flex-direction: column; gap: 20px; }
-    fieldset { border: none; padding: 0; margin: 0; }
-    fieldset + fieldset { margin-top: 24px; }
-        legend { font-size: 1.05rem; font-weight: 600; color: #0b3fad; margin-bottom: 18px; }
-    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 20px; }
-    .field-group { display: flex; flex-direction: column; gap: 8px; }
-    label { font-weight: 600; margin-bottom: 0; color: #1d2a44; }
-        input[type="text"], input[type="email"], textarea, select { width: 100%; padding: 12px; border: 1px solid #d4dbea; border-radius: 10px; font-size: 0.95rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; background: #fdfdff; }
-        input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus { border-color: #0a6cf1; box-shadow: 0 0 0 3px rgba(10, 108, 241, 0.18); outline: none; }
-        textarea { min-height: 160px; resize: vertical; }
-    .field-error { color: #b42318; font-size: 0.82rem; margin: 0; }
-        .alert { padding: 18px 20px; border-radius: 12px; margin-bottom: 18px; border: 1px solid transparent; font-size: 0.95rem; }
-        .alert ul { margin: 8px 0 0; padding-left: 20px; }
-        .alert.error { background: #fff2f0; border-color: #ffc7be; color: #7a1410; }
-        .alert.success { background: #edfdf6; border-color: #a6f3c6; color: #114d2a; }
-        .alert.warning { background: #fff8e6; border-color: #ffe1a8; color: #8a5b07; }
-        button[type="submit"] { align-self: flex-start; background: linear-gradient(135deg, #0b3fad, #0a6cf1); color: #fff; border: none; border-radius: 12px; padding: 14px 24px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(11, 63, 173, 0.28); }
-        button[disabled] { background: #9ab9f6; cursor: not-allowed; box-shadow: none; transform: none; }
-        .privacy-note { display: flex; gap: 12px; align-items: flex-start; background: #f6f8ff; padding: 16px; border-radius: 12px; border: 1px solid #dce4f6; }
-        .privacy-note label { font-weight: 500; color: #1d2a44; }
-        .note { font-size: 0.85rem; color: #4b5a7a; margin-top: 6px; }
-        .footer { background: #0b1d3a; color: #d7e3ff; padding: 32px 24px; text-align: center; font-size: 0.9rem; margin-top: auto; }
-        .footer strong { color: #fff; }
-        @media (max-width: 768px) {
-            .hero { padding: 56px 20px 48px; }
-            .intro-card { padding: 24px; }
-            .form-wrapper { padding: 28px 24px; }
-            .form-grid { gap: 14px; }
-            fieldset + fieldset { margin-top: 18px; }
-            button[type="submit"] { width: 100%; justify-content: center; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            * { transition: none !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -720,22 +655,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>Per maggiore sicurezza applica header HTTP dedicati, limita i MIME lato server e valuta un sistema di rate limiting.</p>
     </footer>
 </div>
-<script>
-(function() {
-    var form = document.querySelector('form');
-    var submitBtn = document.getElementById('submitBtn');
-    if (!form || !submitBtn) {
-        return;
-    }
-    form.addEventListener('submit', function() {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Invio in corso...';
-        setTimeout(function() {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Invia segnalazione';
-        }, 8000);
-    });
-})();
-</script>
 </body>
 </html>
