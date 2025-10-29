@@ -395,19 +395,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/app.js" defer></script>
 </head>
-<body>
-<div class="page">
-    <header class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
+<body class="bg-[#f4f7fb] font-sans text-slateink">
+<div class="flex min-h-screen flex-col">
+    <header class="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
+        <div class="bg-hero-pattern absolute inset-0 opacity-35" aria-hidden="true"></div>
+        <div class="relative mx-auto grid max-w-screen-xl items-center gap-10 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+            <div class="space-y-5">
                 <span class="hero-badge">Subito CASA Web · Castellammare di Stabia</span>
-                <h1>Segnala un immobile — Subito CASA Web</h1>
-                <p>Sede operativa: Via Amato, 17, 80053 Castellammare di Stabia (NA). Collabora con il nostro team e aiutaci a individuare i prossimi immobili da proporre ai clienti.</p>
-                <p><strong>Guadagni</strong> per ogni trattativa conclusa sull'immobile segnalato e hai il supporto dei nostri consulenti in ogni fase.</p>
+                <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">Segnala un immobile — Subito CASA Web</h1>
+                <p class="text-base text-white/90 sm:text-lg">Sede operativa: Via Amato, 17, 80053 Castellammare di Stabia (NA). Collabora con il nostro team e aiutaci a individuare i prossimi immobili da proporre ai clienti.</p>
+                <p class="text-base text-white/90 sm:text-lg"><strong class="font-semibold">Guadagni</strong> per ogni trattativa conclusa sull'immobile segnalato e hai il supporto dei nostri consulenti in ogni fase.</p>
             </div>
-            <div class="hero-details">
-                <h2>Perché segnalarci un immobile</h2>
-                <ul>
+            <div class="rounded-2xl bg-white/10 p-6 text-sm text-white/90 shadow-hero backdrop-blur-md">
+                <h2 class="text-xl font-semibold text-white">Perché segnalarci un immobile</h2>
+                <ul class="mt-4 list-disc space-y-2 pl-5">
                     <li>Collaborazione trasparente e supporto dedicato.</li>
                     <li>Premio economico a vendita conclusa.</li>
                     <li>Processo guidato: ci occupiamo noi della gestione.</li>
@@ -417,44 +418,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
 
     <main>
-        <section class="section overlap">
-            <div class="container intro-card">
-                <h2>Guadagna da casa con Subito CASA Web</h2>
-                <p>Se conosci proprietari intenzionati a vendere o affittare un immobile, inviaci i loro dati nel massimo rispetto della privacy. Ti contatteremo per confermare la segnalazione e coordinare le prossime attività. Con Subito CASA Web collabori in modo semplice, senza vincoli o costi iniziali.</p>
+        <section class="-mt-16 px-6 pb-12 lg:px-8">
+            <div class="mx-auto max-w-screen-lg rounded-2xl bg-white p-8 shadow-intro sm:p-10">
+                <h2 class="text-2xl font-semibold text-primary-dark">Guadagna da casa con Subito CASA Web</h2>
+                <p class="mt-4 text-base leading-relaxed text-slatealt">Se conosci proprietari intenzionati a vendere o affittare un immobile, inviaci i loro dati nel massimo rispetto della privacy. Ti contatteremo per confermare la segnalazione e coordinare le prossime attività. Con Subito CASA Web collabori in modo semplice, senza vincoli o costi iniziali.</p>
             </div>
         </section>
 
-        <section class="section narrow">
-            <div class="container">
-                <div class="steps-grid" aria-label="Come funziona la collaborazione">
-                    <div class="step-card" data-step="STEP 1">
-                        <h3>Raccogli il nominativo</h3>
-                        <p>Parla con chi sta pensando di vendere o affittare. Assicurati che sia d'accordo a essere ricontattato dal nostro staff.</p>
-                    </div>
-                    <div class="step-card" data-step="STEP 2">
-                        <h3>Compila il form</h3>
-                        <p>Inserisci i dettagli dell'immobile e le informazioni utili per valutarlo. Più dati condividi, più veloce sarà la risposta.</p>
-                    </div>
-                    <div class="step-card" data-step="STEP 3">
-                        <h3>Collabora con noi</h3>
-                        <p>Un consulente Subito CASA Web ti aggiornerà sugli sviluppi e ti riconoscerà il compenso una volta conclusa la trattativa.</p>
-                    </div>
+        <section class="px-6 pb-12 lg:px-8">
+            <div class="mx-auto grid max-w-screen-xl gap-5 md:grid-cols-3" aria-label="Come funziona la collaborazione">
+                <div class="step-card" data-step="STEP 1">
+                    <h3 class="text-lg font-semibold text-primary-dark">Raccogli il nominativo</h3>
+                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Parla con chi sta pensando di vendere o affittare. Assicurati che sia d'accordo a essere ricontattato dal nostro staff.</p>
+                </div>
+                <div class="step-card" data-step="STEP 2">
+                    <h3 class="text-lg font-semibold text-primary-dark">Compila il form</h3>
+                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Inserisci i dettagli dell'immobile e le informazioni utili per valutarlo. Più dati condividi, più veloce sarà la risposta.</p>
+                </div>
+                <div class="step-card" data-step="STEP 3">
+                    <h3 class="text-lg font-semibold text-primary-dark">Collabora con noi</h3>
+                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Un consulente Subito CASA Web ti aggiornerà sugli sviluppi e ti riconoscerà il compenso una volta conclusa la trattativa.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section form-section" id="form">
-            <div class="container">
+        <section class="bg-gradient-to-tr from-primary-dark/10 via-primary/10 to-primary-light/20 px-6 py-16 lg:px-8" id="form">
+            <div class="mx-auto max-w-screen-lg">
                 <div class="form-wrapper">
-                    <div class="form-header">
-                        <h2>Inviaci la tua segnalazione</h2>
-                        <p>Compila il form per collaborare con Subito CASA Web. I campi contrassegnati con * sono obbligatori.</p>
+                    <div class="mb-8 space-y-2">
+                        <h2 class="text-3xl font-semibold text-primary-dark">Inviaci la tua segnalazione</h2>
+                        <p class="text-base text-slatealt">Compila il form per collaborare con Subito CASA Web. I campi contrassegnati con * sono obbligatori.</p>
                     </div>
 
                     <?php if (!empty($generalErrors)): ?>
-                        <div class="alert error" role="alert">
-                            <strong>Correggi i seguenti errori:</strong>
-                            <ul>
+                        <div class="alert-error space-y-2" role="alert">
+                            <strong class="block font-semibold">Correggi i seguenti errori:</strong>
+                            <ul class="list-disc space-y-1 pl-5">
                                 <?php foreach ($generalErrors as $error): ?>
                                     <li><?= escape($error) ?></li>
                                 <?php endforeach; ?>
@@ -463,22 +462,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php endif; ?>
 
                     <?php if ($successMessage !== ''): ?>
-                        <div class="alert success" role="status">
+                        <div class="alert-success space-y-2" role="status">
                             <p><?= escape($successMessage) ?></p>
                             <?php if (!empty($displayUploads)): ?>
-                                <p>File caricati:</p>
-                                <ul>
-                                    <?php foreach ($displayUploads as $relative): ?>
-                                        <li><a href="<?= escape($relative) ?>" target="_blank" rel="noopener noreferrer"><?= escape($relative) ?></a></li>
-                                    <?php endforeach; ?>
-                                </ul>
+                                <div>
+                                    <p class="font-semibold">File caricati:</p>
+                                    <ul class="mt-1 space-y-1 text-sm">
+                                        <?php foreach ($displayUploads as $relative): ?>
+                                            <li><a class="text-primary underline-offset-2 hover:underline" href="<?= escape($relative) ?>" target="_blank" rel="noopener noreferrer"><?= escape($relative) ?></a></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
 
                     <?php if (!empty($generalWarnings)): ?>
-                        <div class="alert warning" role="alert">
-                            <ul>
+                        <div class="alert-warning" role="alert">
+                            <ul class="list-disc space-y-1 pl-5">
                                 <?php foreach ($generalWarnings as $warning): ?>
                                     <li><?= escape($warning) ?></li>
                                 <?php endforeach; ?>
@@ -486,173 +487,173 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     <?php endif; ?>
 
-                    <form method="post" enctype="multipart/form-data" novalidate>
+                    <form method="post" enctype="multipart/form-data" novalidate class="space-y-8">
                         <input type="hidden" name="csrf_token" value="<?= escape($_SESSION['csrf_token'] ?? '') ?>">
 
-                        <fieldset>
-                            <legend>Dati di contatto</legend>
-                            <div class="form-grid">
-                                <div class="field-group">
-                                    <label for="nome">Nome *</label>
-                                    <input type="text" id="nome" name="nome" placeholder="Mario" value="<?= escape($formData['nome']) ?>">
+                        <fieldset class="space-y-6">
+                            <legend class="text-lg font-semibold text-primary-dark">Dati di contatto</legend>
+                            <div class="grid gap-5 md:grid-cols-2">
+                                <div class="space-y-2">
+                                    <label for="nome" class="text-sm font-semibold text-slateink">Nome *</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Mario" value="<?= escape($formData['nome']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['nome'])): ?>
-                                        <div class="field-error"><?= is_array($fieldErrors['nome']) ? escape(implode(' ', $fieldErrors['nome'])) : escape($fieldErrors['nome']) ?></div>
+                                        <p class="field-error"><?= is_array($fieldErrors['nome']) ? escape(implode(' ', $fieldErrors['nome'])) : escape($fieldErrors['nome']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="cognome">Cognome</label>
-                                    <input type="text" id="cognome" name="cognome" placeholder="Rossi" value="<?= escape($formData['cognome']) ?>">
+                                <div class="space-y-2">
+                                    <label for="cognome" class="text-sm font-semibold text-slateink">Cognome</label>
+                                    <input type="text" id="cognome" name="cognome" placeholder="Rossi" value="<?= escape($formData['cognome']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['cognome'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['cognome']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['cognome']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="azienda">Nome azienda</label>
-                                    <input type="text" id="azienda" name="azienda" placeholder="Azienda Srl" value="<?= escape($formData['azienda']) ?>">
+                                <div class="space-y-2">
+                                    <label for="azienda" class="text-sm font-semibold text-slateink">Nome azienda</label>
+                                    <input type="text" id="azienda" name="azienda" placeholder="Azienda Srl" value="<?= escape($formData['azienda']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['azienda'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['azienda']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['azienda']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="telefono">Telefono</label>
-                                    <input type="text" id="telefono" name="telefono" placeholder="331 1234567" value="<?= escape($formData['telefono']) ?>">
+                                <div class="space-y-2">
+                                    <label for="telefono" class="text-sm font-semibold text-slateink">Telefono</label>
+                                    <input type="text" id="telefono" name="telefono" placeholder="331 1234567" value="<?= escape($formData['telefono']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['telefono'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['telefono']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['telefono']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" placeholder="nome@example.com" value="<?= escape($formData['email']) ?>" required>
+                                <div class="space-y-2 md:col-span-2">
+                                    <label for="email" class="text-sm font-semibold text-slateink">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="nome@example.com" value="<?= escape($formData['email']) ?>" required class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['email'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['email']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['email']) ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div>
                         </fieldset>
 
-                        <fieldset>
-                            <legend>Dati immobile</legend>
-                            <div class="form-grid">
-                                <div class="field-group">
-                                    <label for="indirizzo">Indirizzo immobile</label>
-                                    <input type="text" id="indirizzo" name="indirizzo" placeholder="Via esempio, 10" value="<?= escape($formData['indirizzo']) ?>">
+                        <fieldset class="space-y-6">
+                            <legend class="text-lg font-semibold text-primary-dark">Dati immobile</legend>
+                            <div class="grid gap-5 md:grid-cols-2">
+                                <div class="space-y-2">
+                                    <label for="indirizzo" class="text-sm font-semibold text-slateink">Indirizzo immobile</label>
+                                    <input type="text" id="indirizzo" name="indirizzo" placeholder="Via esempio, 10" value="<?= escape($formData['indirizzo']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['indirizzo'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['indirizzo']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['indirizzo']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="cap">CAP</label>
-                                    <input type="text" id="cap" name="cap" placeholder="80053" value="<?= escape($formData['cap']) ?>">
+                                <div class="space-y-2">
+                                    <label for="cap" class="text-sm font-semibold text-slateink">CAP</label>
+                                    <input type="text" id="cap" name="cap" placeholder="80053" value="<?= escape($formData['cap']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['cap'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['cap']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['cap']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="citta">Città</label>
-                                    <input type="text" id="citta" name="citta" placeholder="Castellammare di Stabia" value="<?= escape($formData['citta']) ?>">
+                                <div class="space-y-2">
+                                    <label for="citta" class="text-sm font-semibold text-slateink">Città</label>
+                                    <input type="text" id="citta" name="citta" placeholder="Castellammare di Stabia" value="<?= escape($formData['citta']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['citta'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['citta']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['citta']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="provincia">Provincia</label>
-                                    <input type="text" id="provincia" name="provincia" placeholder="NA" value="<?= escape($formData['provincia']) ?>">
+                                <div class="space-y-2">
+                                    <label for="provincia" class="text-sm font-semibold text-slateink">Provincia</label>
+                                    <input type="text" id="provincia" name="provincia" placeholder="NA" value="<?= escape($formData['provincia']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['provincia'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['provincia']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['provincia']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="operazione">Tipo operazione</label>
-                                    <select id="operazione" name="operazione">
+                                <div class="space-y-2">
+                                    <label for="operazione" class="text-sm font-semibold text-slateink">Tipo operazione</label>
+                                    <select id="operazione" name="operazione" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                         <?php foreach ($operationOptions as $value => $label): ?>
                                             <option value="<?= escape($value) ?>"<?= $formData['operazione'] === $value ? ' selected' : '' ?>><?= escape($label) ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                     <?php if (!empty($fieldErrors['operazione'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['operazione']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['operazione']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="tipologia">Tipologia immobile</label>
-                                    <select id="tipologia" name="tipologia">
+                                <div class="space-y-2">
+                                    <label for="tipologia" class="text-sm font-semibold text-slateink">Tipologia immobile</label>
+                                    <select id="tipologia" name="tipologia" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                         <?php foreach ($propertyOptions as $value => $label): ?>
                                             <option value="<?= escape($value) ?>"<?= $formData['tipologia'] === $value ? ' selected' : '' ?>><?= escape($label) ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                     <?php if (!empty($fieldErrors['tipologia'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['tipologia']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['tipologia']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="locali">Locali / Camere</label>
-                                    <input type="text" id="locali" name="locali" placeholder="3" value="<?= escape($formData['locali']) ?>">
+                                <div class="space-y-2">
+                                    <label for="locali" class="text-sm font-semibold text-slateink">Locali / Camere</label>
+                                    <input type="text" id="locali" name="locali" placeholder="3" value="<?= escape($formData['locali']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['locali'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['locali']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['locali']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="mq">MQ</label>
-                                    <input type="text" id="mq" name="mq" placeholder="120" value="<?= escape($formData['mq']) ?>">
+                                <div class="space-y-2">
+                                    <label for="mq" class="text-sm font-semibold text-slateink">MQ</label>
+                                    <input type="text" id="mq" name="mq" placeholder="120" value="<?= escape($formData['mq']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['mq'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['mq']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['mq']) ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="field-group">
-                                    <label for="prezzo">Prezzo (€)</label>
-                                    <input type="text" id="prezzo" name="prezzo" placeholder="250000" value="<?= escape($formData['prezzo']) ?>">
+                                <div class="space-y-2">
+                                    <label for="prezzo" class="text-sm font-semibold text-slateink">Prezzo (€)</label>
+                                    <input type="text" id="prezzo" name="prezzo" placeholder="250000" value="<?= escape($formData['prezzo']) ?>" class="block w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                     <?php if (!empty($fieldErrors['prezzo'])): ?>
-                                        <div class="field-error"><?= escape($fieldErrors['prezzo']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['prezzo']) ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div>
                         </fieldset>
 
-                        <fieldset>
-                            <legend>Dettagli aggiuntivi</legend>
-                            <div class="field-group">
-                                <label for="descrizione">Descrizione libera</label>
-                                <textarea id="descrizione" name="descrizione" placeholder="Inserisci informazioni aggiuntive sull'immobile."><?= escape($formData['descrizione']) ?></textarea>
+                        <fieldset class="space-y-6">
+                            <legend class="text-lg font-semibold text-primary-dark">Dettagli aggiuntivi</legend>
+                            <div class="space-y-2">
+                                <label for="descrizione" class="text-sm font-semibold text-slateink">Descrizione libera</label>
+                                <textarea id="descrizione" name="descrizione" placeholder="Inserisci informazioni aggiuntive sull'immobile." class="block min-h-[160px] w-full rounded-xl border border-indigo-100/70 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary"><?= escape($formData['descrizione']) ?></textarea>
                                 <?php if (!empty($fieldErrors['descrizione'])): ?>
-                                    <div class="field-error"><?= escape($fieldErrors['descrizione']) ?></div>
+                                    <p class="field-error"><?= escape($fieldErrors['descrizione']) ?></p>
                                 <?php endif; ?>
                             </div>
 
-                            <div class="field-group">
-                                <label for="allegati">Allega file (max <?= escape((string)$maxFiles) ?>, JPG/PNG/PDF, 5 MB ciascuno)</label>
-                                <input type="file" id="allegati" name="allegati[]" multiple accept=".jpg,.jpeg,.png,.pdf">
+                            <div class="space-y-2">
+                                <label for="allegati" class="text-sm font-semibold text-slateink">Allega file (max <?= escape((string)$maxFiles) ?>, JPG/PNG/PDF, 5 MB ciascuno)</label>
+                                <input type="file" id="allegati" name="allegati[]" multiple accept=".jpg,.jpeg,.png,.pdf" class="block w-full cursor-pointer rounded-xl border border-dashed border-indigo-200 bg-white px-4 py-3 text-sm text-slateink shadow-sm focus:border-primary focus:ring-primary">
                                 <?php if (!empty($fieldErrors['allegati'])): ?>
                                     <?php if (is_array($fieldErrors['allegati'])): ?>
                                         <?php foreach ($fieldErrors['allegati'] as $fileError): ?>
-                                            <div class="field-error"><?= escape($fileError) ?></div>
+                                            <p class="field-error"><?= escape($fileError) ?></p>
                                         <?php endforeach; ?>
                                     <?php else: ?>
-                                        <div class="field-error"><?= escape($fieldErrors['allegati']) ?></div>
+                                        <p class="field-error"><?= escape($fieldErrors['allegati']) ?></p>
                                     <?php endif; ?>
                                 <?php endif; ?>
-                                <p class="note">Suggerimento: rendere la cartella "uploads/" non eseguibile (es. .htaccess con "Options -ExecCGI" o regole del web server).</p>
+                                <p class="text-xs text-slatealt">Suggerimento: rendere la cartella "uploads/" non eseguibile (es. .htaccess con "Options -ExecCGI" o regole del web server).</p>
                             </div>
                         </fieldset>
 
-                        <div class="field-group">
+                        <div class="space-y-2">
                             <div class="privacy-note">
-                                <input type="checkbox" id="privacy" name="privacy" value="1"<?= $privacyAccepted ? ' checked' : '' ?> required>
-                                <label for="privacy">Accetto l'informativa sulla privacy e il trattamento dei dati per la gestione della richiesta.</label>
+                                <input type="checkbox" id="privacy" name="privacy" value="1"<?= $privacyAccepted ? ' checked' : '' ?> required class="mt-1 h-5 w-5 rounded border-indigo-200 text-primary focus:ring-primary">
+                                <label for="privacy" class="cursor-pointer text-sm font-medium">Accetto l'informativa sulla privacy e il trattamento dei dati per la gestione della richiesta.</label>
                             </div>
                             <?php if (!empty($fieldErrors['privacy'])): ?>
-                                <div class="field-error"><?= escape($fieldErrors['privacy']) ?></div>
+                                <p class="field-error"><?= escape($fieldErrors['privacy']) ?></p>
                             <?php endif; ?>
                         </div>
 
-                        <button type="submit" id="submitBtn">Invia segnalazione</button>
+                        <button type="submit" id="submitBtn" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-dark to-primary px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:bg-primary/60 disabled:shadow-none">Invia segnalazione</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p><strong>Subito CASA Web</strong> · Via Amato, 17, 80053 Castellammare di Stabia (NA) · Tel. +39 081 000000</p>
-        <p>Per maggiore sicurezza applica header HTTP dedicati, limita i MIME lato server e valuta un sistema di rate limiting.</p>
+    <footer class="bg-[#0b1d3a] py-10 text-center text-sm text-white/80">
+        <p class="text-white">Subito CASA Web · Via Amato, 17, 80053 Castellammare di Stabia (NA) · Tel. +39 081 000000</p>
+        <p class="mt-2 text-white/85">Per maggiore sicurezza applica header HTTP dedicati, limita i MIME lato server e valuta un sistema di rate limiting.</p>
     </footer>
 </div>
 </body>

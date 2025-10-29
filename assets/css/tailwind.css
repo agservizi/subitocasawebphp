@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f4f7fb] text-slateink font-sans;
+  }
+}
+
+@layer utilities {
+  .bg-hero-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='200' cy='150' r='90' fill='rgba(255,255,255,0.05)'/%3E%3Ccircle cx='320' cy='80' r='60' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+}
+
+@layer components {
+  .hero-badge {
+    @apply inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold tracking-wide;
+  }
+  .step-card {
+    @apply relative overflow-hidden rounded-xl bg-white p-6 shadow-card;
+  }
+  .step-card::before {
+    content: attr(data-step);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(11, 63, 173, 0.65);
+  }
+  .form-wrapper {
+    @apply rounded-2xl bg-white p-10 shadow-panel;
+  }
+  .alert-error {
+    @apply rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-800;
+  }
+  .alert-success {
+    @apply rounded-xl border border-emerald-200 bg-emerald-50 px-5 py-4 text-sm text-emerald-900;
+  }
+  .alert-warning {
+    @apply rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm text-amber-900;
+  }
+  .field-error {
+    @apply text-xs font-medium text-red-600;
+  }
+  .privacy-note {
+    @apply flex gap-3 rounded-xl border border-indigo-100 bg-indigo-50 px-4 py-4 text-sm text-slateink;
+  }
+  .footer-note {
+    @apply text-center text-sm text-white/90;
+  }
+}
