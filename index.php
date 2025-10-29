@@ -395,191 +395,269 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/app.js" defer></script>
 </head>
-<body class="bg-[#f4f7fb] font-sans text-slateink">
+<body class="bg-slate-50 font-sans text-slateink">
 <div class="flex min-h-screen flex-col">
     <header class="relative overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
         <div class="bg-hero-pattern absolute inset-0 opacity-35" aria-hidden="true"></div>
-        <div class="relative mx-auto grid max-w-screen-xl items-center gap-10 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
-            <div class="space-y-5">
-                <span class="hero-badge">Subito CASA Web · Castellammare di Stabia</span>
-                <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">Segnala un immobile — Subito CASA Web</h1>
-                <p class="text-base text-white/90 sm:text-lg">Sede operativa: Via Amato, 17, 80053 Castellammare di Stabia (NA). Collabora con il nostro team e aiutaci a individuare i prossimi immobili da proporre ai clienti.</p>
-                <p class="text-base text-white/90 sm:text-lg"><strong class="font-semibold">Guadagni</strong> per ogni trattativa conclusa sull'immobile segnalato e hai il supporto dei nostri consulenti in ogni fase.</p>
-            </div>
-            <div class="rounded-2xl bg-white/10 p-6 text-sm text-white/90 shadow-hero backdrop-blur-md">
-                <h2 class="text-xl font-semibold text-white">Perché segnalarci un immobile</h2>
-                <ul class="mt-4 list-disc space-y-2 pl-5">
-                    <li>Collaborazione trasparente e supporto dedicato.</li>
-                    <li>Premio economico a vendita conclusa.</li>
-                    <li>Processo guidato: ci occupiamo noi della gestione.</li>
-                </ul>
+        <div class="relative mx-auto max-w-screen-xl px-6 py-20 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+                <div class="space-y-6">
+                    <span class="section-eyebrow text-white/80">Subito CASA Web · Castellammare di Stabia</span>
+                    <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">Segnala un immobile con Subito CASA Web</h1>
+                    <p class="max-w-2xl text-base text-white/85 sm:text-lg">Sede operativa: Via Amato, 17, 80053 Castellammare di Stabia (NA). Collabora con il nostro team, condividi contatti qualificati e ottieni un compenso dedicato quando l'operazione va a buon fine.</p>
+                    <ul class="grid gap-3 text-sm text-white/90 sm:grid-cols-2">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold leading-none text-white">1</span>
+                            Segnalazioni riservate con aggiornamenti continui dal nostro staff.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold leading-none text-white">2</span>
+                            Supporto dei consulenti Subito CASA Web in ogni fase della trattativa.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold leading-none text-white">3</span>
+                            Compenso concordato e tracciabile al momento dell'incasso delle provvigioni.
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold leading-none text-white">4</span>
+                            Processi chiari, senza costi di attivazione né vincoli esclusivi per il segnalatore.
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#form" class="btn-primary">Compila la segnalazione</a>
+                        <a href="#faq" class="btn-secondary">Scopri come funziona</a>
+                    </div>
+                </div>
+                <aside class="hero-panel">
+                    <p class="text-sm uppercase tracking-[0.28em] text-white/70">Processo guidato</p>
+                    <h2 class="mt-4 text-2xl font-semibold text-white">Cosa succede dopo la tua segnalazione</h2>
+                    <ol class="mt-8 space-y-5 text-sm">
+                        <li class="flex gap-4">
+                            <span class="timeline-index">1</span>
+                            <div>
+                                <p class="font-semibold text-white">Verifica del contatto</p>
+                                <p class="text-white/80">Il nostro team chiama il proprietario entro 48 ore per confermare disponibilità e motivazioni.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="timeline-index">2</span>
+                            <div>
+                                <p class="font-semibold text-white">Valutazione dell'immobile</p>
+                                <p class="text-white/80">Un consulente effettua sopralluogo o analisi documentale e condivide il piano commerciale.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="timeline-index">3</span>
+                            <div>
+                                <p class="font-semibold text-white">Trattativa trasparente</p>
+                                <p class="text-white/80">Ricevi aggiornamenti puntuali, con report scritto quando l'operazione entra in proposta.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="timeline-index">4</span>
+                            <div>
+                                <p class="font-semibold text-white">Pagamento del compenso</p>
+                                <p class="text-white/80">Liquidazione sul tuo IBAN entro 15 giorni dall'incasso della provvigione.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </aside>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="-mt-16 px-6 pb-12 lg:px-8">
-            <div class="mx-auto grid max-w-screen-xl gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-                <div class="rounded-2xl bg-white p-8 shadow-intro sm:p-10">
-                    <h2 class="text-2xl font-semibold text-primary-dark sm:text-3xl">Guadagna da casa con Subito CASA Web</h2>
-                    <p class="mt-4 text-base leading-relaxed text-slatealt">Conosci qualcuno che vuole vendere o affittare casa? Segnalalo al nostro team e noi ci occupiamo del resto, garantendo comunicazione trasparente e rispetto della privacy.</p>
-                    <ul class="mt-6 space-y-3 text-sm text-slatealt">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">1</span>
-                            Condividi nome, contatti e dettagli dell'immobile con il consenso del proprietario.
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">2</span>
-                            Ti aggiorniamo sull'esito del contatto e sull'avanzamento della trattativa.
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">3</span>
-                            Ricevi il compenso concordato quando l'affare va a buon fine.
-                        </li>
-                    </ul>
-                    <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <a href="#form" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-dark to-primary px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Compila la segnalazione</a>
-                        <span class="text-xs font-medium uppercase tracking-wide text-slatealt">Collaborazione semplice · Nessun costo di attivazione</span>
-                    </div>
-                </div>
-                <div class="rounded-2xl bg-white p-8 shadow-intro sm:p-10">
-                    <h3 class="text-xl font-semibold text-primary-dark">Cosa serve per iniziare</h3>
-                    <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                        <div class="rounded-xl border border-indigo-100/80 bg-slate-50/70 px-5 py-4">
-                            <p class="text-sm font-semibold text-primary-dark">Contatto diretto</p>
-                            <p class="mt-2 text-sm text-slatealt">Il proprietario deve essere consapevole della segnalazione e disponibile a parlarci.</p>
+    <main class="flex-1">
+        <section class="-mt-20 px-6 pb-12 lg:px-8">
+            <div class="mx-auto grid max-w-screen-xl gap-6 lg:grid-cols-4">
+                <article class="card-feature lg:col-span-2">
+                    <span class="section-eyebrow">Collaborazione win-win</span>
+                    <h2 class="section-title mt-4">Un partner sul territorio che valorizza le tue segnalazioni</h2>
+                    <p class="section-body mt-4">Subito CASA Web nasce a Castellammare di Stabia e lavora ogni giorno per creare connessioni tra proprietari motivati e acquirenti affidabili. La tua conoscenza locale diventa parte di un processo strutturato, remunerativo e completamente supportato dal nostro team.</p>
+                    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-2xl bg-slate-50/80 p-5 text-sm text-slatealt">
+                            <p class="font-semibold text-primary-dark">Team dedicato</p>
+                            <p class="mt-2">Un referente unico ti aggiorna sugli sviluppi e tutela la relazione con il proprietario.</p>
                         </div>
-                        <div class="rounded-xl border border-indigo-100/80 bg-slate-50/70 px-5 py-4">
-                            <p class="text-sm font-semibold text-primary-dark">Dati utili</p>
-                            <p class="mt-2 text-sm text-slatealt">Indirizzo, tipologia, metratura stimata, informazioni di contatto e note utili.</p>
+                        <div class="rounded-2xl bg-slate-50/80 p-5 text-sm text-slatealt">
+                            <p class="font-semibold text-primary-dark">Iter documentato</p>
+                            <p class="mt-2">Report e feedback scritti ti permettono di monitorare facilmente l'andamento.</p>
                         </div>
-                        <div class="rounded-xl border border-indigo-100/80 bg-slate-50/70 px-5 py-4">
-                            <p class="text-sm font-semibold text-primary-dark">Tempistiche</p>
-                            <p class="mt-2 text-sm text-slatealt">Ti ricontattiamo in massimo 48 ore per confermare la segnalazione.</p>
+                        <div class="rounded-2xl bg-slate-50/80 p-5 text-sm text-slatealt">
+                            <p class="font-semibold text-primary-dark">Massima riservatezza</p>
+                            <p class="mt-2">I dati condivisi sono gestiti internamente nel rispetto delle norme privacy.</p>
                         </div>
-                        <div class="rounded-xl border border-indigo-100/80 bg-slate-50/70 px-5 py-4">
-                            <p class="text-sm font-semibold text-primary-dark">Supporto dedicato</p>
-                            <p class="mt-2 text-sm text-slatealt">Un consulente Subito CASA Web segue l'intera trattativa con professionalità.</p>
+                        <div class="rounded-2xl bg-slate-50/80 p-5 text-sm text-slatealt">
+                            <p class="font-semibold text-primary-dark">Remunerazione chiara</p>
+                            <p class="mt-2">Compenso concordato a monte, pattuito in modo trasparente e tracciabile.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 pb-16 lg:px-8">
-            <div class="mx-auto grid max-w-screen-xl gap-6 md:grid-cols-3" aria-label="Come funziona la collaborazione">
-                <div class="step-card" data-step="STEP 1">
-                    <h3 class="text-lg font-semibold text-primary-dark">Raccogli il nominativo</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Confrontati con chi sta pensando di vendere o affittare e assicurati di avere il suo consenso a essere ricontattato.</p>
-                </div>
-                <div class="step-card" data-step="STEP 2">
-                    <h3 class="text-lg font-semibold text-primary-dark">Compila il form</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Inserisci i dati richiesti: più informazioni condividi, più rapida sarà la nostra analisi.</p>
-                </div>
-                <div class="step-card" data-step="STEP 3">
-                    <h3 class="text-lg font-semibold text-primary-dark">Collabora con noi</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-slatealt">Ti teniamo aggiornato sugli sviluppi e ricevi il compenso pattuito alla chiusura della trattativa.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white px-6 py-16 lg:px-8">
-            <div class="mx-auto flex max-w-screen-xl flex-col gap-10 lg:flex-row">
-                <div class="flex-1 space-y-6">
-                    <span class="hero-badge bg-primary/10 text-primary-dark">Collaborazione trasparente</span>
-                    <h2 class="text-3xl font-semibold text-primary-dark">Perché conviene segnalare con Subito CASA Web</h2>
-                    <p class="text-base leading-relaxed text-slatealt">Ci ispiriamo a modelli di collaborazione come quello del Gruppo Weplaza, ma li adattiamo al territorio di Castellammare di Stabia. Offriamo un processo chiaro, rapido e remunerativo, garantendo tutela per il segnalatore e per il proprietario.</p>
-                    <ul class="grid gap-4 md:grid-cols-2">
-                        <li class="rounded-xl border border-indigo-100 bg-slate-50/70 p-5 text-sm text-slatealt">
-                            <p class="font-semibold text-primary-dark">Zero improvvisazione</p>
-                            <p class="mt-2">Usiamo checklist interne per raccogliere tutte le informazioni necessarie e dare un feedback immediato.</p>
+                </article>
+                <article class="card-feature lg:col-span-2">
+                    <span class="section-eyebrow">Cosa serve</span>
+                    <h2 class="section-title mt-4">Prima della segnalazione</h2>
+                    <ul class="mt-6 space-y-4 text-sm text-slatealt">
+                        <li class="flex gap-3">
+                            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary-dark">1</span>
+                            <div>
+                                <p class="font-semibold text-primary-dark">Consenso del proprietario</p>
+                                <p class="mt-1">Avvisa la persona che stai segnalando, spiegando che un consulente Subito CASA Web la contatterà entro 48 ore.</p>
+                            </div>
                         </li>
-                        <li class="rounded-xl border border-indigo-100 bg-slate-50/70 p-5 text-sm text-slatealt">
-                            <p class="font-semibold text-primary-dark">Tutela del rapporto</p>
-                            <p class="mt-2">Manteniamo riservati i tuoi dati e condividiamo solo le informazioni indispensabili con il team commerciale.</p>
+                        <li class="flex gap-3">
+                            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary-dark">2</span>
+                            <div>
+                                <p class="font-semibold text-primary-dark">Informazioni di base</p>
+                                <p class="mt-1">Indirizzo dell'immobile, tipologia, eventuali preferenze su prezzo o tempistiche, recapiti aggiornati.</p>
+                            </div>
                         </li>
-                        <li class="rounded-xl border border-indigo-100 bg-slate-50/70 p-5 text-sm text-slatealt">
-                            <p class="font-semibold text-primary-dark">Valutazioni realistiche</p>
-                            <p class="mt-2">Verifichiamo lo stato dell'immobile e il posizionamento sul mercato per proporre strategie efficaci.</p>
+                        <li class="flex gap-3">
+                            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary-dark">3</span>
+                            <div>
+                                <p class="font-semibold text-primary-dark">Documenti facoltativi</p>
+                                <p class="mt-1">Planimetrie, foto o contratti di locazione aiutano la valutazione, ma puoi inviarli anche dopo.</p>
+                            </div>
                         </li>
-                        <li class="rounded-xl border border-indigo-100 bg-slate-50/70 p-5 text-sm text-slatealt">
-                            <p class="font-semibold text-primary-dark">Aggiornamenti puntuali</p>
-                            <p class="mt-2">Ricevi comunicazioni periodiche sull'avanzamento del mandato e sulle trattative in corso.</p>
+                        <li class="flex gap-3">
+                            <span class="inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary/15 text-sm font-semibold text-primary-dark">4</span>
+                            <div>
+                                <p class="font-semibold text-primary-dark">Aspettative condivise</p>
+                                <p class="mt-1">Concordiamo con te le modalità del compenso così da allineare fin da subito gli obiettivi.</p>
+                            </div>
                         </li>
                     </ul>
+                    <div class="mt-8 rounded-2xl border border-indigo-100/70 bg-white/70 p-6 text-sm text-slatealt">
+                        <p class="font-semibold text-primary-dark">Hai più segnalazioni?</p>
+                        <p class="mt-2">Compila un modulo per ciascun immobile: in questo modo riceverai un tracking dedicato e potremo aggiornarti con precisione.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="px-6 pb-16 lg:px-8" aria-label="Percorso di collaborazione">
+            <div class="mx-auto grid max-w-screen-xl gap-8 lg:grid-cols-[1fr,1.1fr]">
+                <div class="space-y-6">
+                    <span class="section-eyebrow">Roadmap</span>
+                    <h2 class="section-title">Dalla segnalazione al bonifico</h2>
+                    <p class="section-body">Abbiamo semplificato ogni passaggio per farti sentire parte del progetto: niente lungaggini, niente sorprese. Segui la timeline e scopri come valorizziamo il tuo contributo.</p>
+                    <div class="grid gap-4 md:grid-cols-2">
+                        <div class="stat-card">
+                            <p class="text-4xl font-semibold text-primary-dark">48h</p>
+                            <p class="mt-1 text-sm text-slatealt">Tempo massimo per il primo contatto con il proprietario.</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="text-4xl font-semibold text-primary-dark">100%</p>
+                            <p class="mt-1 text-sm text-slatealt">Trasparenza sugli step, con report condiviso.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex-1 rounded-2xl bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 text-white shadow-panel">
-                    <h3 class="text-2xl font-semibold">Come verrai retribuito</h3>
-                    <p class="mt-4 text-sm text-white/85">Quando la compravendita (o la locazione) va a buon fine e Subito CASA Web incassa le provvigioni, eroghiamo il compenso concordato sul tuo IBAN.</p>
-                    <ul class="mt-6 space-y-4 text-sm text-white/85">
-                        <li class="flex gap-3">
-                            <span class="mt-1 h-6 w-6 flex-none rounded-full bg-white/20 text-center text-xs font-semibold leading-6 text-white">1</span>
-                            Ricevi un riepilogo scritto con i termini dell'accordo di collaborazione e l'importo previsto.
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="mt-1 h-6 w-6 flex-none rounded-full bg-white/20 text-center text-xs font-semibold leading-6 text-white">2</span>
-                            Ti informiamo quando l'immobile entra in trattativa e al momento della proposta accettata.
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="mt-1 h-6 w-6 flex-none rounded-full bg-white/20 text-center text-xs font-semibold leading-6 text-white">3</span>
-                            Il pagamento avviene con bonifico entro 15 giorni dall'incasso della provvigione.
-                        </li>
-                    </ul>
-                    <p class="mt-6 rounded-xl bg-white/15 p-4 text-xs text-white/80">Nota: non segnaliamo annunci già pubblici o cartelli stradali; privilegiamo segnalazioni calde con rapporto diretto.</p>
+                <div class="space-y-4">
+                    <div class="timeline-step">
+                        <div class="timeline-index">1</div>
+                        <h3 class="mt-4 text-lg font-semibold text-primary-dark">Raccolta del contatto</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slatealt">Inserisci il nominativo nel form indicando come hai conosciuto il proprietario e quali sono le sue esigenze.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-index">2</div>
+                        <h3 class="mt-4 text-lg font-semibold text-primary-dark">Analisi commerciale</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slatealt">Un consulente dedica tempo all'immobile, raccoglie documenti e definisce il prezzo di mercato.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-index">3</div>
+                        <h3 class="mt-4 text-lg font-semibold text-primary-dark">Trattativa & contrattualistica</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slatealt">Gestiamo visite, proposte e accordi; ricevi notifiche sugli step chiave fino al rogito o alla firma del contratto.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-index">4</div>
+                        <h3 class="mt-4 text-lg font-semibold text-primary-dark">Liquidazione compenso</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-slatealt">Appena incassata la provvigione, emettiamo ricevuta o fattura e bonifichiamo l'importo concordato.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-slate-50 px-6 py-16 lg:px-8">
+        <section class="bg-gradient-to-br from-primary-dark/90 via-primary to-primary-light px-6 py-16 text-white lg:px-8">
             <div class="mx-auto max-w-screen-xl space-y-10">
-                <div class="grid gap-6 md:grid-cols-2">
-                    <div class="rounded-2xl border border-indigo-100 bg-white p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-primary-dark">Quali immobili puoi segnalare?</h3>
-                        <p class="mt-3 text-sm text-slatealt">Appartamenti, case indipendenti, soluzioni commerciali, terreni edificabili o agricoli. Ogni richiesta viene valutata con il nostro team tecnico.</p>
-                        <ul class="mt-5 space-y-2 text-sm text-slatealt">
-                            <li>• Immobili liberi o locati, purché ci sia disponibilità a una trattativa.</li>
-                            <li>• Proprietari con mandato esclusivo assente o in scadenza.</li>
-                            <li>• Situazioni da riqualificare: cantieri, eredità, ristrutturazioni.</li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl border border-indigo-100 bg-white p-8 shadow-sm">
-                        <h3 class="text-xl font-semibold text-primary-dark">Domande frequenti</h3>
-                        <ul class="mt-4 space-y-4 text-sm text-slatealt">
-                            <li>
-                                <p class="font-semibold text-primary-dark">Serve partita IVA?</p>
-                                <p>No, puoi essere un privato cittadino. Gestiamo noi la documentazione necessaria alla fatturazione o ricevuta.</p>
+                <div class="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+                    <div class="space-y-4">
+                        <span class="section-eyebrow text-white/80">Il valore della tua segnalazione</span>
+                        <h2 class="text-3xl font-semibold sm:text-4xl">Un compenso concreto, calibrato sul risultato</h2>
+                        <p class="text-base text-white/85">Ogni accordo è definito in modo sartoriale: consideriamo tipologia dell'immobile, livello di coinvolgimento richiesto e complessità della trattativa.</p>
+                        <ul class="space-y-3 text-sm text-white/90">
+                            <li class="flex gap-3">
+                                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold text-white">✔</span>
+                                Compenso variabile dal 10% al 25% delle provvigioni incassate, concordato prima dell'avvio.
                             </li>
-                            <li>
-                                <p class="font-semibold text-primary-dark">Quanto tempo ho per segnalare?</p>
-                                <p>Appena hai i dati, compilali. Prima interveniamo, maggiori sono le probabilità di concludere l'affare.</p>
+                            <li class="flex gap-3">
+                                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold text-white">✔</span>
+                                Bonifico entro 15 giorni dall'incasso, con ricevuta/fattura dedicata.
                             </li>
-                            <li>
-                                <p class="font-semibold text-primary-dark">Posso segnalare più immobili?</p>
-                                <p>Sì, ogni segnalazione va inserita separatamente per garantire tracciabilità e aggiornamenti puntuali.</p>
+                            <li class="flex gap-3">
+                                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/25 text-xs font-semibold text-white">✔</span>
+                                Possibilità di bonus extra su segnalazioni ripetute o immobili strategici.
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="rounded-2xl bg-gradient-to-br from-primary-dark via-primary to-primary-light px-8 py-10 text-white shadow-panel">
-                    <div class="grid gap-6 md:grid-cols-[2fr_1fr] md:items-center">
-                        <div>
-                            <h3 class="text-2xl font-semibold">Pronto a iniziare?</h3>
-                            <p class="mt-3 text-sm text-white/85">Raccontaci l'immobile e diventa nostro partner. Il form qui sotto ti guida passo dopo passo: bastano pochi minuti.</p>
-                        </div>
-                        <div class="md:text-right">
-                            <a href="#form" class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-sm font-semibold text-primary-dark shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-primary">Vai al form</a>
-                        </div>
+                    <div class="rounded-3xl bg-white/10 p-8 shadow-hero backdrop-blur">
+                        <h3 class="text-2xl font-semibold">Checklist prima dell'invio</h3>
+                        <ul class="mt-5 space-y-4 text-sm text-white/85">
+                            <li>
+                                <p class="font-semibold text-white">Contatti aggiornati</p>
+                                <p class="text-white/80">Telefono o email diretta del proprietario, disponibili per un confronto rapido.</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold text-white">Contesto dell'immobile</p>
+                                <p class="text-white/80">Stato attuale (libero, locato, ristrutturato) e motivazione della vendita/locazione.</p>
+                            </li>
+                            <li>
+                                <p class="font-semibold text-white">Aspettative economiche</p>
+                                <p class="text-white/80">Prezzo indicativo oppure range di riferimento da condividere con il proprietario.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gradient-to-tr from-primary-dark/10 via-primary/10 to-primary-light/20 px-6 py-16 lg:px-8" id="form">
+        <section class="px-6 py-16 lg:px-8" id="faq">
+            <div class="mx-auto max-w-screen-xl space-y-10">
+                <div class="text-center">
+                    <span class="section-eyebrow">Domande frequenti</span>
+                    <h2 class="section-title mt-4">Tutte le risposte per iniziare subito</h2>
+                    <p class="section-body mx-auto mt-3 max-w-3xl">Abbiamo raccolto i quesiti più comuni di chi collabora con noi. Se hai bisogno di chiarimenti aggiuntivi, scrivici e ti ricontatteremo entro un giorno lavorativo.</p>
+                </div>
+                <div class="grid gap-6 lg:grid-cols-3">
+                    <article class="card-feature">
+                        <h3 class="text-lg font-semibold text-primary-dark">Posso segnalare un immobile fuori provincia?</h3>
+                        <p class="section-body mt-2">Sì, lavoriamo principalmente tra Napoli e Salerno ma prendiamo in carico anche altre zone quando l'opportunità è in linea con la nostra clientela.</p>
+                    </article>
+                    <article class="card-feature">
+                        <h3 class="text-lg font-semibold text-primary-dark">Cosa succede se il proprietario è già in contatto con altre agenzie?</h3>
+                        <p class="section-body mt-2">Verifichiamo eventuali vincoli in esclusiva e, se compatibile, offriamo una collaborazione in parallelo. Ti aggiorniamo sull'esito della verifica contrattuale.</p>
+                    </article>
+                    <article class="card-feature">
+                        <h3 class="text-lg font-semibold text-primary-dark">Chi gestisce la documentazione?</h3>
+                        <p class="section-body mt-2">Il nostro back-office controlla visure, planimetrie e certificazioni. Tu puoi inviare i file già in tuo possesso direttamente dal modulo.</p>
+                    </article>
+                </div>
+                <div class="rounded-2xl border border-indigo-100/70 bg-white p-8 shadow-panel">
+                    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-primary-dark">Hai una segnalazione pronta?</h3>
+                            <p class="section-body mt-2 max-w-2xl">Compila il modulo completo qui sotto, allega eventuali file e un consulente Subito CASA Web ti contatterà per confermare i prossimi passi.</p>
+                        </div>
+                        <a href="#form" class="btn-primary">Vai al modulo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-tr from-primary-dark/10 via-primary/10 to-primary-light/20 px-6 py-20 lg:px-8" id="form">
             <div class="mx-auto max-w-screen-lg">
                 <div class="form-wrapper">
-                    <div class="mb-8 space-y-2">
-                        <h2 class="text-3xl font-semibold text-primary-dark">Inviaci la tua segnalazione</h2>
-                        <p class="text-base text-slatealt">Compila il form per collaborare con Subito CASA Web. I campi contrassegnati con * sono obbligatori.</p>
+                    <div class="mb-8 space-y-3">
+                        <span class="section-eyebrow">Modulo segnalazioni</span>
+                        <h2 class="section-title">Inviaci la tua segnalazione</h2>
+                        <p class="section-body">Compila il form per collaborare con Subito CASA Web. I campi contrassegnati con * sono obbligatori.</p>
                     </div>
 
                     <?php if (!empty($generalErrors)): ?>
@@ -776,16 +854,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <?php endif; ?>
                         </div>
 
-                        <button type="submit" id="submitBtn" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-dark to-primary px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white disabled:cursor-not-allowed disabled:bg-primary/60 disabled:shadow-none">Invia segnalazione</button>
+                        <button type="submit" id="submitBtn" class="btn-primary w-full justify-center text-base disabled:cursor-not-allowed disabled:bg-primary/60 disabled:shadow-none">Invia segnalazione</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#0b1d3a] py-10 text-center text-sm text-white/80">
+    <footer class="bg-[#0b1d3a] py-12 text-center text-sm text-white/80">
         <p class="text-white">Subito CASA Web · Via Amato, 17, 80053 Castellammare di Stabia (NA) · Tel. +39 081 000000</p>
-        <p class="mt-2 text-white/85">Per maggiore sicurezza applica header HTTP dedicati, limita i MIME lato server e valuta un sistema di rate limiting.</p>
+        <p class="mt-3 text-white/85">Per maggiore sicurezza applica header HTTP dedicati, limita i MIME lato server e valuta un sistema di rate limiting.</p>
     </footer>
 </div>
 </body>

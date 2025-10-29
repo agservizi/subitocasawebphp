@@ -31,6 +31,40 @@
     font-weight: 600;
     color: rgba(11, 63, 173, 0.65);
   }
+  .hero-panel {
+    @apply rounded-2xl bg-white/15 p-6 text-white/90 shadow-hero backdrop-blur-md;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-dark to-primary px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-white;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary;
+  }
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary-dark/80;
+  }
+  .section-title {
+    @apply text-3xl font-semibold text-primary-dark md:text-4xl;
+  }
+  .section-body {
+    @apply text-base leading-relaxed text-slatealt;
+  }
+  .card-feature {
+    @apply rounded-2xl border border-indigo-100/70 bg-white p-8 shadow-intro;
+  }
+  .stat-card {
+    @apply rounded-2xl bg-white/80 p-6 text-center shadow-panel backdrop-blur;
+  }
+  .timeline-step {
+    @apply relative rounded-2xl border border-indigo-100/80 bg-white p-6 shadow-sm;
+  }
+  .timeline-step::before {
+    content: "";
+    @apply absolute left-3 top-3 h-10 w-10 rounded-full bg-primary/15;
+  }
+  .timeline-index {
+    @apply relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-primary-dark to-primary text-sm font-semibold text-white shadow-lg;
+  }
   .form-wrapper {
     @apply rounded-2xl bg-white p-10 shadow-panel;
   }
