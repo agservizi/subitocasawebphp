@@ -423,17 +423,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .form-header { margin-bottom: 32px; }
         .form-header h2 { margin: 0 0 8px; font-size: 1.9rem; color: #0b3fad; }
         .form-header p { margin: 0; color: #4b5a7a; }
-        form { display: flex; flex-direction: column; gap: 24px; }
-        fieldset { border: none; padding: 0; margin: 0; }
-        fieldset + fieldset { margin-top: 8px; }
+    form { display: flex; flex-direction: column; gap: 20px; }
+    fieldset { border: none; padding: 0; margin: 0; }
+    fieldset + fieldset { margin-top: 24px; }
         legend { font-size: 1.05rem; font-weight: 600; color: #0b3fad; margin-bottom: 18px; }
-        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-        .field-group { display: flex; flex-direction: column; }
-        label { font-weight: 600; margin-bottom: 6px; color: #1d2a44; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 20px; }
+    .field-group { display: flex; flex-direction: column; gap: 8px; }
+    label { font-weight: 600; margin-bottom: 0; color: #1d2a44; }
         input[type="text"], input[type="email"], textarea, select { width: 100%; padding: 12px; border: 1px solid #d4dbea; border-radius: 10px; font-size: 0.95rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; background: #fdfdff; }
         input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus { border-color: #0a6cf1; box-shadow: 0 0 0 3px rgba(10, 108, 241, 0.18); outline: none; }
         textarea { min-height: 160px; resize: vertical; }
-        .field-error { color: #b42318; font-size: 0.82rem; margin-top: 6px; }
+    .field-error { color: #b42318; font-size: 0.82rem; margin: 0; }
         .alert { padding: 18px 20px; border-radius: 12px; margin-bottom: 18px; border: 1px solid transparent; font-size: 0.95rem; }
         .alert ul { margin: 8px 0 0; padding-left: 20px; }
         .alert.error { background: #fff2f0; border-color: #ffc7be; color: #7a1410; }
@@ -451,6 +451,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             .hero { padding: 56px 20px 48px; }
             .intro-card { padding: 24px; }
             .form-wrapper { padding: 28px 24px; }
+            .form-grid { gap: 14px; }
+            fieldset + fieldset { margin-top: 18px; }
             button[type="submit"] { width: 100%; justify-content: center; }
         }
         @media (prefers-reduced-motion: reduce) {
